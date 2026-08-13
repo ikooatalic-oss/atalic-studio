@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATALIC STUDIO — Haute Digital & Visual Arts System</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Background Particle Interactive -->
+  <canvas id="particleCanvas"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Dynamic Progress Bar (Maju saat di-scroll) -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Floating Quick Dock Menu -->
+  <div class="quick-dock">
+    <a href="#hero" class="dock-item" title="Utama">✦</a>
+    <a href="#services" class="dock-item" title="Layanan">⚙</a>
+    <a href="#calculator" class="dock-item" title="Kalkulator">🧮</a>
+    <a href="#portfolio" class="dock-item" title="Portofolio">🎨</a>
+    <a href="#process" class="dock-item" title="Proses">⏳</a>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="brand">
+      <div class="brand-logo-wrapper">
+        <svg class="brand-logo-svg" viewBox="0 0 500 500" fill="none">
+          <path d="M250 80L130 380H195L250 240L305 380H370L250 80Z" fill="currentColor" opacity="0.3"/>
+          <path d="M120 380L250 80L310 230H240L200 330H340V380H120Z" fill="currentColor"/>
+          <path d="M240 200C240 200 360 200 360 270C360 340 240 340 240 340L290 380C290 380 430 370 430 270C430 170 310 160 240 200Z" fill="currentColor"/>
+        </svg>
+      </div>
+      <span class="brand-fullname">ATALIC STUDIO</span>
+    </div>
+    
+    <nav class="nav-links">
+      <a href="#services">Layanan</a>
+      <a href="#calculator">Estimasi</a>
+      <a href="#portfolio">Mahakarya</a>
+      <a href="#process">Alur Kerja</a>
+      <a href="#contact" class="nav-btn">Mulai Proyek</a>
+    </nav>
+
+    <div class="accent-selector">
+      <div class="dots-wrapper">
+        <button class="dot gold active" onclick="setAura('gold')"></button>
+        <button class="dot emerald" onclick="setAura('emerald')"></button>
+        <button class="dot amethyst" onclick="setAura('amethyst')"></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-compass-wrapper">
+      <svg class="hero-logo-watermark" viewBox="0 0 500 500" fill="none">
+        <path d="M120 380L250 80L310 230H240L200 330H340V380H120Z" fill="currentColor"/>
+        <path d="M240 200C240 200 360 200 360 270C360 340 240 340 240 340L290 380C290 380 430 370 430 270C430 170 310 160 240 200Z" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <p class="hero-pretitle reveal-element">ATALIC STUDIO — DIGITAL ARTISAN</p>
+    <h1 class="hero-title reveal-element">Presisi Vektor. <i>Arsitektur Visual</i> Tanpa Batas.</h1>
+    <p class="hero-subtext reveal-element">
+      Kami menciptakan sistem identitas visual, desain produk interaktif, dan materi promosi eksklusif skala tinggi dengan tingkat presisi pixel-perfect.
+    </p>
+    
+    <div class="hero-actions reveal-element">
+      <a href="#calculator" class="cta-primary">Hitung Estimasi Proyek &rarr;</a>
+      <a href="#portfolio" class="cta-secondary">Eksplorasi Galeri</a>
+    </div>
+  </section>
+
+  <!-- Animated Counter Bar -->
+  <section class="stats-bar reveal-element">
+    <div class="stat-item">
+      <span class="stat-number" data-target="100">0</span><span class="stat-plus">%</span>
+      <span class="stat-label">Vector Grid Accuracy</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="145">0</span><span class="stat-plus">+</span>
+      <span class="stat-label">Bespoke Brand System</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="12">0</span><span class="stat-plus">ms</span>
+      <span class="stat-label">Ultra Low Latency UI</span>
+    </div>
+  </section>
+
+  <!-- CHAPTER 1: Layanan Utama Interaktif -->
+  <section id="services" class="section">
+    <div class="section-intro reveal-element">
+      <span class="chapter-number">CHAPTER I</span>
+      <h2>Pelayanan & Kapabilitas Digital</h2>
+      <p>Solusi komprehensif untuk mengangkat entitas merek Anda ke level tertinggi.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal-element">
+        <div class="service-icon">01</div>
+        <h3>Bespoke Brand Identity</h3>
+        <p>Pembangunan identitas visual menyeluruh: Monogram Vektor, Pedoman Tipografi, Sistem Warna, hingga Asset Library siap cetak & digital.</p>
+        <ul class="service-list">
+          <li>✓ Grid System Precision</li>
+          <li>✓ Vector Monogram Design</li>
+          <li>✓ Brand Guidelines Manual</li>
+        </ul>
+      </div>
+
+      <div class="service-card reveal-element">
+        <div class="service-icon">02</div>
+        <h3>Interactive UI/UX Systems</h3>
+        <p>Perancangan antarmuka web dan aplikasi eksklusif berkinerja tinggi dengan efek animasi mikro dan arsitektur responsif.</p>
+        <ul class="service-list">
+          <li>✓ High-End Glassmorphism</li>
+          <li>✓ Smooth Scroll Engine</li>
+          <li>✓ Custom Interactive Elements</li>
+        </ul>
+      </div>
+
+      <div class="service-card reveal-element">
+        <div class="service-icon">03</div>
+        <h3>High-Precision Vector Illustration</h3>
+        <p>Ilustrasi vektor tingkat kompleksitas tinggi untuk kebutuhan kemasan mewah, merch eksklusif, hingga materi kampanye skala nasional.</p>
+        <ul class="service-list">
+          <li>✓ Unlimited Resolution Scalability</li>
+          <li>✓ Foil & Metal Emboss Prep</li>
+          <li>✓ Layered Source Files (.AI, .SVG)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 2: Interactive Project Cost Calculator -->
+  <section id="calculator" class="section">
+    <div class="section-intro reveal-element">
+      <span class="chapter-number">CHAPTER II</span>
+      <h2>Kalkulator Estimasi Layanan</h2>
+      <p>Pilih kebutuhan Anda di bawah ini untuk melihat perkiraan investasi dan waktu pengerjaan secara instan.</p>
+    </div>
+
+    <div class="calculator-card reveal-element">
+      <div class="calc-options">
+        <label class="calc-check">
+          <input type="checkbox" value="3500000" id="opt-brand" onchange="calculateTotal()">
+          <span class="checkmark"></span>
+          <div class="opt-desc">
+            <strong>Brand Identity System</strong>
+            <span>Logo Vektor, Palet Warna, Type Guidelines</span>
+          </div>
+        </label>
+
+        <label class="calc-check">
+          <input type="checkbox" value="5000000" id="opt-web" onchange="calculateTotal()">
+          <span class="checkmark"></span>
+          <div class="opt-desc">
+            <strong>Interactive Web Development</strong>
+            <span>Animasi Scroll, Modern UI/UX, Fully Responsive</span>
+          </div>
+        </label>
+
+        <label class="calc-check">
+          <input type="checkbox" value="2500000" id="opt-vector" onchange="calculateTotal()">
+          <span class="checkmark"></span>
+          <div class="opt-desc">
+            <strong>Custom Vector Assets / Illustration</strong>
+            <span>Akurasi Tinggi, Hot Foil Ready, Infinite Scale</span>
+          </div>
+        </label>
+
+        <div class="calc-urgency">
+          <span>Kecepatan Pengerjaan:</span>
+          <select id="calc-speed" onchange="calculateTotal()">
+            <option value="1">Standar (14-21 Hari Kerja)</option>
+            <option value="1.3">Prioritas Eksklusif (7-10 Hari Kerja) [+30%]</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="calc-summary">
+        <span class="summary-label">Perkiraan Investasi</span>
+        <div class="price-display" id="totalPrice">IDR 0</div>
+        <p class="summary-note">*Harga final ditentukan setelah konsultasi rincian brief.</p>
+        <a href="#contact" class="calc-btn">Konsultasikan Brief Ini &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 3: Interactive Before-After Metamorfosis -->
+  <section id="portfolio" class="section">
+    <div class="section-intro reveal-element">
+      <span class="chapter-number">CHAPTER III</span>
+      <h2>Metamorfosis & Presisi Karya</h2>
+      <p>Geser untuk membandingkan sketsa kawat (wireframe grid) dengan hasil pemolesan tata cahaya akhir.</p>
+    </div>
+
+    <div class="interactive-slider reveal-element" id="sliderContainer" onmousemove="updateSpotlight(event)">
+      <div class="slider-layer layer-wireframe" style="background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop');">
+        <div class="flat-vector-filter"></div>
+        <span class="layer-tag">SKETSA FLAT & VECTOR GRID</span>
+      </div>
+
+      <div class="slider-layer layer-finished" id="finishedLayer" style="background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop');">
+        <div class="dynamic-spotlight" id="spotlight"></div>
+        <span class="layer-tag">EFEK LIGHTING & GOLD FOIL</span>
+      </div>
+
+      <div class="slider-divider-line" id="dividerLine" style="left: 50%;">
+        <div class="slider-handle">↔</div>
+      </div>
+
+      <input type="range" min="0" max="100" value="50" class="range-input" oninput="revealLayer(this.value)">
+    </div>
+  </section>
+
+  <!-- CHAPTER 4: Alur Kerja Interactive Timeline -->
+  <section id="process" class="section">
+    <div class="section-intro reveal-element">
+      <span class="chapter-number">CHAPTER IV</span>
+      <h2>Alur Pengerjaan (Proses Kreatif)</h2>
+      <p>Transparansi tahap kerja dari sketsa awal hingga serah terima aset.</p>
+    </div>
+
+    <div class="timeline-wrapper">
+      <div class="timeline-step reveal-element">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h3>Penjelajahan Brief & Concept</h3>
+          <p>Menganalisis karakteristik merek, audiens sasaran, dan menyusun peta jalan gaya visual yang selaras.</p>
+        </div>
+      </div>
+
+      <div class="timeline-step reveal-element">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h3>Konstruksi Grid Vektor</h3>
+          <p>Membangun kurva simetris dengan matematika presisi tinggi menggunakan Pen-Tool profesional.</p>
+        </div>
+      </div>
+
+      <div class="timeline-step reveal-element">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h3>Pengembangan Material & Rendering</h3>
+          <p>Menerapkan tekstur pencahayaan, foil emas, dan interaktivitas sistem untuk media cetak maupun digital.</p>
+        </div>
+      </div>
+
+      <div class="timeline-step reveal-element">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <h3>Penyerahan Aset & Dokumentasi</h3>
+          <p>Mengirimkan file master (.AI, .SVG, .PNG 8K, .JSON) beserta lisensi penggunaan komersial penuh.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 5: Inspector Warna & Pigmen -->
+  <section class="section">
+    <div class="section-intro reveal-element">
+      <span class="chapter-number">CHAPTER V</span>
+      <h2>Palet Warna & Pigmen Visual</h2>
+      <p>Klik warna di bawah ini untuk menyalin kode heksadesimal ke clipboard Anda.</p>
+    </div>
+
+    <div class="palette-container">
+      <div class="pigment-card reveal-element" style="background: #c5a059;" onclick="copyPigment('#c5a059', 'Champagne Gold')">
+        <span class="color-hex">#C5A059</span>
+        <span class="color-name">Champagne Gold</span>
+      </div>
+      <div class="pigment-card reveal-element" style="background: #0f1115;" onclick="copyPigment('#0f1115', 'Noir Onyx')">
+        <span class="color-hex">#0F1115</span>
+        <span class="color-name">Noir Onyx</span>
+      </div>
+      <div class="pigment-card reveal-element" style="background: #1c2826;" onclick="copyPigment('#1c2826', 'Imperial Jade')">
+        <span class="color-hex">#1C2826</span>
+        <span class="color-name">Imperial Jade</span>
+      </div>
+      <div class="pigment-card reveal-element" style="background: #23192e;" onclick="copyPigment('#23192e', 'Royal Amethyst')">
+        <span class="color-hex">#23192E</span>
+        <span class="color-name">Royal Amethyst</span>
+      </div>
+    </div>
+    <div id="toastNotification" class="toast">Pigmen Disalin</div>
+  </section>
+
+  <!-- Contact & Footer Section -->
+  <footer id="contact" class="editorial-footer">
+    <div class="footer-cta reveal-element">
+      <h2>Siap Mengabadikan Identitas Visual Anda?</h2>
+      <p>Mari diskusikan ide dan wujudkan mahakarya berikutnya bersama Atalic Studio.</p>
+      <a href="mailto:hello@atalicstudio.com" class="cta-primary">Kirimkan Surat Brief &rarr;</a>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-quote">“Keindahan adalah kesederhanaan yang telah mencapai puncak kerumitannya.”</p>
+      <p class="copyright">© MMXXVI ATALIC STUDIO. ALL RIGHTS RESERVED.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
